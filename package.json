@@ -53,6 +53,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-providers": "^2.0.2",
+    "serialize-javascript": "^4.0.0",
     "state-hooks": "^3.0.1"
   }
 }

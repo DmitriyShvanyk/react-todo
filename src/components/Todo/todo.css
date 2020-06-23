@@ -1,0 +1,103 @@
+.todo__list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  padding: .75rem 1rem;
+  margin-bottom: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.todo__index {
+  font-size: .75rem;
+}
+
+.todo__index,
+.todo__check,
+.todo__title {
+  margin-right: 1rem;
+}
+
+.todo__title {
+  position: relative;
+}
+
+.todo__title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  margin-top: -1px;
+  transition: width .3s ease;
+}
+
+.todo__del {
+  margin-left: auto;
+  cursor: pointer;
+  background-color: #ccc;
+  border: none;
+  color: #555;
+  outline: none;
+  border-radius: 3px;
+  transition: color .3s ease, background-color .3s ease;
+}
+
+.todo__del:hover {
+  color: #fff;
+  background-color: tomato;
+}
+
+.todo__item--done .todo__title::before {
+  width: 100%;
+}
+
+
+
+.todo__form-add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.todo__form-add-control{
+  outline: none;
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 45px;
+  padding: 5px 20px;
+  border: 2px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  transition: border-color .3s ease;
+}
+
+.todo__form-add-control:focus{
+  border-color: royalblue;
+}
+
+.todo__form-add-submit{
+  outline: none;
+  height: 45px;
+  background-color: royalblue;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 5px 30px;
+  cursor: pointer;
+  transition: opacity .3s ease;
+}
+
+.todo__form-add-submit:hover,
+.todo__form-add-submit:focus,
+.todo__form-add-submit:active{
+  opacity: .8;
+}
